@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
@@ -58,6 +61,26 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
+        },
+        "audit": {
+            "ignore": {
+                "PKSA-m5cs-t1y6-qpcs": {
+                    "apply": "block",
+                    "reason": "Atividade academica baseada em Laravel 9; execucao local. Aviso permanece no composer audit."
+                },
+                "PKSA-8qx3-n5y5-vvnd": {
+                    "apply": "block",
+                    "reason": "Atividade academica baseada em Laravel 9; execucao local. Aviso permanece no composer audit."
+                },
+                "PKSA-3r5d-mb8f-1qw9": {
+                    "apply": "block",
+                    "reason": "Atividade academica baseada em Laravel 9; execucao local. Aviso permanece no composer audit."
+                },
+                "PKSA-mdq4-51ck-6kdq": {
+                    "apply": "block",
+                    "reason": "Atividade academica baseada em Laravel 9; execucao local. Aviso permanece no composer audit."
+                }
+            }
         }
     },
     "minimum-stability": "stable",

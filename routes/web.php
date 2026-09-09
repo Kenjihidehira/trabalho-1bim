@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductItensController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/produtos');
+Route::get('/produtos', [ProductController::class, 'index'])->name('products.index');
+Route::get('/produtos/{product}/itens', [ProductItensController::class, 'index'])->name('products.items.index');
